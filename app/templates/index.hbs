@@ -1,7 +1,10 @@
 <h1>HEY.</h1>
 
-{{#each model as |question|}}
-  {{question.content}}
-{{/each}}
+<ul>
+  {{#each model as |question|}}
+    {{#link-to 'question' question.id}}<li>{{question.content}}<br>
+        Author: {{question.author}}</li>{{/link-to}}
+  {{/each}}
+</ul>
 
 {{new-question saveQuestion="saveQuestion"}}
