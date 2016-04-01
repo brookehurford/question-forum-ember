@@ -1,3 +1,5 @@
 <h1>{{ question.content }}</h1>
 <h2>Asked by: {{ question.author }}</h2>
 <h3>Additional Notes: {{ question.notes }}</h3>
+
+<button {{action 'delete' question}}>Delete</button>

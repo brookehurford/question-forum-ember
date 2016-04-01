@@ -5,8 +5,17 @@
   margin: 0 auto;
 }
 
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+.navigation {
+  background-color: rgba(255,127,80, 0.5);
 }
 
 .createQuestionSection {
