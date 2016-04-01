@@ -1,25 +1,20 @@
-{{#if updateQuestionForm}}
+{{#liquid-if updateQuestionForm class="fade-demo"}}
 <div class="updateQuestionSection">
+  <hr>
   <h2>Edit Question</h2>
   <form class="editQuestionForm">
-    <div class="form-group">
       <label for="content">Question</label>
       {{input value=question.content id="content"}}
-    </div>
-    <div class="form-group">
       <label for="author">Your Name</label>
       {{input value=question.author id="author"}}
-    </div>
-    <div class="form-group">
       <label for="notes">Notes</label>
       {{textarea value=question.notes id="notes"}}
-    </div>
-    <button {{action 'updateQuestion' question}}>Save Updated Question</button>
+    <button class="primaryBtn"{{action 'updateQuestion' question}}>Save Updated Question</button>
   </form>
-  <button{{action 'toggleDetail'}}>Cancel</button>
+  <button class="secondaryBtn" {{action 'toggleDetail'}}>Nevermind</button>
 </div>
 {{else}}
   <div class="updateQuestionSection">
-    <button {{action 'toggleDetail'}}>Edit Question</button>
+    <button class="primaryBtn"{{action 'toggleDetail'}}>Edit Question</button>
   </div>
-{{/if}}
+{{/liquid-if}}

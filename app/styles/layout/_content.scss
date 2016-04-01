@@ -22,3 +22,25 @@
     padding-bottom: 5px;
   }
 }
+
+.updateQuestionSection {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  input, textarea {
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 2%;
+    box-shadow: inset none;
+  }
+  label {
+    padding-bottom: 5px;
+  }
+  .primaryBtn {
+    margin: 25px 0px;
+  }
+}

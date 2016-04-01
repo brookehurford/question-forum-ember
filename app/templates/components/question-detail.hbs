@@ -1,15 +1,18 @@
-<h1>{{ question.content }}</h1>
-<h2>Asked by: {{ question.author }}</h2>
-<h3>Additional Notes: {{ question.notes }}</h3>
-
-{{update-question question=question updateQuestion="updateQuestion" }}
-<button {{action 'delete' question}}>Delete</button>
-<hr>
-
-<ul>
-  {{#each question.answers as |answer|}}
+<div class="questionDetails">
+  <div class="container">
+    <h1>{{ question.content }}</h1>
+    <h2>Asked by: {{ question.author }}</h2>
+    <h3>Additional Notes: {{ question.notes }}</h3>
+    {{update-question question=question updateQuestion="updateQuestion" }}
+    <hr>
+    <button class="secondaryBtn"{{action 'delete' question}}>Delete this question</button>
+  </div>
+</div>
+<div class="container">
+  <ul>
+    {{#each question.answers as |answer|}}
     <li>{{answer-tile answer=answer}}</li>
-  {{/each}}
-</ul>
-
-{{ new-answer saveAnswer="saveAnswer" question=question}}
+    {{/each}}
+  </ul>
+  {{ new-answer saveAnswer="saveAnswer" question=question}}
+</div>

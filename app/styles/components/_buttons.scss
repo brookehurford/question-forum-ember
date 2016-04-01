@@ -21,9 +21,9 @@
 
 .primaryBtn {
   font-family: 'Montserrat', sans-serif;
-  width: 150px;
+  width: 200px;
   margin: 25px auto;
-  height: 50px;
+  height: 35px;
   background-color: black;
   color: white;
   border: none;
@@ -41,4 +41,18 @@
 
 .secondaryBtn {
   font-family: 'Montserrat', sans-serif;
+  width: 150px;
+  padding: 5px 0px;
+  margin: 8px 0px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px black;
+  transition: all 300ms linear;
+  &:hover {
+    transition: all 300ms linear;
+    background-color: tomato;
+    color: white;
+    cursor: pointer;
+  }
 }
