@@ -1,10 +1,15 @@
 {{new-question saveQuestion="saveQuestion"}}
 
 <div class="container">
-  <ul>
+  <div class="questionList">
+    <h2>The world has a question for you...</h2>
     {{#each model as |question|}}
-    {{#link-to 'question' question.id}}<li>{{question.content}}<br>
-      Author: {{question.author}}</li>{{/link-to}}
-      {{/each}}
-    </ul>
+      {{#link-to 'question' question.id}}
+        <div class="questionItem">
+          <span class="questionContent">{{question.content}}</span><br>
+          <span class="questionAuthor">Author: {{question.author}}</span>
+        </div>
+      {{/link-to}}
+    {{/each}}
+  </div>
 </div>

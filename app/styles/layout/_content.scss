@@ -1,5 +1,6 @@
 .createQuestionSection {
-  padding-top: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: rgba(208,252,179, 0.8);
   display: flex;
   align-items: center;
@@ -9,13 +10,13 @@
     flex-direction: column;
     width: 60%;
   }
-  button {
-    margin: 25px auto;
-    width: 150px;
-  }
   input, textarea {
     margin-bottom: 2%;
     padding-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 2%;
+    box-shadow: inset none;
   }
   label {
     padding-bottom: 5px;
