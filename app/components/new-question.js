@@ -13,6 +13,9 @@ export default Ember.Component.extend({
         answer: this.get('answer'),
       };
       this.toggleProperty('newQuestionForm');
+      this.set('content', "");
+      this.set('author', "");
+      this.set('notes', "");
       this.sendAction('saveQuestion', formInputs);
     }
   }
