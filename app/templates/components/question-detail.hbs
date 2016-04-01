@@ -9,10 +9,10 @@
   </div>
 </div>
 <div class="container">
-  <ul>
-    {{#each question.answers as |answer|}}
-    <li>{{answer-tile answer=answer}}</li>
-    {{/each}}
-  </ul>
   {{ new-answer saveAnswer="saveAnswer" question=question}}
+  {{#each question.answers as |answer|}}
+  <div class="answerItem">
+    {{answer-tile answer=answer}}
+  </div>
+  {{/each}}
 </div>

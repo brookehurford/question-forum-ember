@@ -30,10 +30,3 @@ export default Ember.Route.extend({
     }
   }
 });
-
-
-// saveAnswer(formInputs) {
-//   var newAnswer = this.store.createRecord('answer', formInputs);
-//   newAnswer.save();
-//   this.transitionTo('question');
-// }

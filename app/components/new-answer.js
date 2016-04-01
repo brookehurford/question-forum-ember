@@ -13,6 +13,8 @@ export default Ember.Component.extend({
       };
       console.log(formInputs);
       this.toggleProperty('newAnswerForm');
+      this.set('content', "");
+      this.set('author', "");
       this.sendAction('saveAnswer', formInputs);
     }
   }
