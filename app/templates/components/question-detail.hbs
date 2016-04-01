@@ -2,4 +2,5 @@
 <h2>Asked by: {{ question.author }}</h2>
 <h3>Additional Notes: {{ question.notes }}</h3>
 
+{{update-question question=question updateQuestion="updateQuestion" }}
 <button {{action 'delete' question}}>Delete</button>

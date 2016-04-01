@@ -8,6 +8,15 @@ export default Ember.Route.extend({
     destroyQuestion(question) {
       question.destroyRecord();
       this.transitionTo('index');
+    },
+    updateQuestion(question, formInputs) {
+      Object.keys(formInputs).forEach(function(key) {
+        if(formInputs[key]!==undefined) {
+          question.set(key,formInputs[key]);
+        }
+      });
+      question.save();
+      this.transitionTo('question');
     }
   }
 });
