@@ -7,9 +7,9 @@ export default Ember.Component.extend({
     },
     saveQuestion() {
       var formInputs = {
-        content: this.get('title') ? this.get('title'): "",
-        author: this.get('title') ? this.get('title'): "",
-        notes: this.get('title') ? this.get('title'): ""
+        content: this.get('content') ? this.get('content'):"",
+        author: this.get('author') ? this.get('author'):"",
+        notes: this.get('notes') ? this.get('notes'):""
       };
       this.toggleProperty('newQuestionForm');
       this.sendAction('saveQuestion', formInputs);
