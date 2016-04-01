@@ -19,9 +19,21 @@ export default Ember.Route.extend({
       this.transitionTo('question');
     },
     saveAnswer(formInputs) {
+      console.log(formInputs);
       var newAnswer = this.store.createRecord('answer', formInputs);
-      newAnswer.save();
-      this.transitionTo('question');
+      var question = formInputs.question;
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function() {
+        return question.save();
+      });
+      this.transitionTo('question', formInputs.question);
     }
   }
 });
+
+
+// saveAnswer(formInputs) {
+//   var newAnswer = this.store.createRecord('answer', formInputs);
+//   newAnswer.save();
+//   this.transitionTo('question');
+// }
