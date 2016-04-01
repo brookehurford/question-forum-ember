@@ -1,0 +1,50 @@
+<h3>New Question here!</h3>
+
+<!-- {{#if addNewQuestion}}
+  <h1>New Question</h1>
+    <div>
+      <form class="createQuestionForm">
+        <div class="form-group">
+          <label for="content">Question</label>
+          {{input value=content id="content"}}
+        </div>
+        <div class="form-group">
+          <label for="author">Your Name</label>
+          {{input value=author id="author"}}
+        </div>
+        <div class="form-group">
+          <label for="notes">Notes</label>
+          {{textarea value=notes id="notes"}}
+        </div>
+        <button {{action 'save1'}}>Post Question</button>
+      </form>
+    </div>
+{{else}}
+    <button {{action 'rentalFormShow'}}>New Rental</button>
+{{/if}} -->
+
+{{#if newQuestionForm}}
+<div class="createQuestionSection">
+  <h2>Add New Question</h2>
+  <form class="createQuestionForm">
+    <div class="form-group">
+      <label for="content">Question</label>
+      {{input value=content id="content"}}
+    </div>
+    <div class="form-group">
+      <label for="author">Your Name</label>
+      {{input value=author id="author"}}
+    </div>
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      {{textarea value=notes id="notes"}}
+    </div>
+    <button {{action 'saveQuestion'}}>Post Question</button>
+  </form>
+  <button{{action 'toggleDetail'}}>Cancel</button>
+</div>
+{{else}}
+  <div class="createQuestionSection">
+    <button {{action 'toggleDetail'}}>Add New Question</button>
+  </div>
+{{/if}}
