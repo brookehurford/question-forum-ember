@@ -1,0 +1,23 @@
+.createQuestionSection {
+  padding-top: 20px;
+  background-color: rgba(208,252,179, 0.8);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+  button {
+    margin: 25px auto;
+    width: 150px;
+  }
+  input, textarea {
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+  }
+  label {
+    padding-bottom: 5px;
+  }
+}
