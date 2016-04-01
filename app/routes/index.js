@@ -6,18 +6,9 @@ export default Ember.Route.extend({
   },
   actions: {
     saveQuestion(formInputs) {
-      console.log(formInputs);
       var newQuestion = this.store.createRecord('question', formInputs);
       newQuestion.save();
       this.transitionTo('index');
     }
   }
 });
-
-// export default Ember.Route.extend({
-//   saveQuestion(formInputs) {
-//     var newQuestion = this.store.createRecord('question', formInputs);
-//     newQuestion.save();
-//     this.transitionTo('index');
-//   }
-// });

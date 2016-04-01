@@ -4,3 +4,12 @@
 
 {{update-question question=question updateQuestion="updateQuestion" }}
 <button {{action 'delete' question}}>Delete</button>
+<hr>
+
+<ul>
+  {{#each question.answers as |answer|}}
+    <li>{{answer-tile answer=answer}}</li>
+  {{/each}}
+</ul>
+
+{{ new-answer saveAnswer="saveAnswer"}}
