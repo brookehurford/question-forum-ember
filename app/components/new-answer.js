@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export default Ember.Component.extend({
   actions: {
@@ -10,6 +11,7 @@ export default Ember.Component.extend({
         content: this.get('content') ? this.get('content'):"",
         author: this.get('author') ? this.get('author'):"",
         question: this.get('question'),
+        date: moment().format("LLL")
       };
       console.log(formInputs);
       this.toggleProperty('newAnswerForm');
