@@ -4,13 +4,7 @@
   <div class="questionList">
     <h2>The world has a question for you...</h2>
     {{#each model as |question|}}
-      {{#link-to 'question' question.id}}
-        <div class="questionItem">
-          <span class="questionContent">{{question.content}}</span><br>
-          <span class="questionAuthor">Author: {{question.author}}</span><br>
-          {{popular question}}
-        </div>
-      {{/link-to}}
+      {{question-tile question=question}}
     {{/each}}
   </div>
 </div>

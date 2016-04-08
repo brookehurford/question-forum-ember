@@ -6,7 +6,7 @@
     {{#if itemFavorited}}
       <p class="favorited"><i class="fa fa-star"></i>Favorited</p>
     {{else}}
-      <button {{action 'addToFavorites' question}} class="secondaryBtn">Favorite this Question</button>
+      <button {{action 'addToFavorites' question}} class="yellowBtn">Favorite this Question</button>
     {{/if}}
     {{update-question question=question updateQuestion="updateQuestion" }}
     <hr>
@@ -14,6 +14,7 @@
   </div>
 </div>
 <div class="container">
+  Total Answers: {{totalAnswers}}
   {{ new-answer saveAnswer="saveAnswer" question=question}}
   {{#each question.answers as |answer|}}
   <div class="answerItem">
