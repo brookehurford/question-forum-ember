@@ -1,5 +1,8 @@
 {{#each favorites.questions as |question|}}
-  {{question.content}}, {{question.author}}
+  {{#link-to 'question' question.id}}
+    <div class="questionItem">
+      <span class="questionContent">{{question.content}}</span><br>
+      <span class="questionAuthor">Author: {{question.author}}</span>
+    </div>
+  {{/link-to}}
 {{/each}}
-
-{{log favorites.questions "favorites"}}
