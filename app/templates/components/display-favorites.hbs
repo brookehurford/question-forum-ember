@@ -6,3 +6,23 @@
     </div>
   {{/link-to}}
 {{/each}}
+
+{{#each favorites.questions as |question|}}
+  {{#link-to 'question' question.id}}
+    <div class="questionItem">
+      <span class="questionContent">{{question.content}}</span><br>
+      <span class="questionAuthor">Author: {{question.author}}</span>
+    </div>
+  {{/link-to}}
+{{/each}}
+
+<!-- {{#if favoritesExist}}
+  {{#link-to 'question' question.id}}
+    <div class="questionItem">
+      <span class="questionContent">{{question.content}}</span><br>
+      <span class="questionAuthor">Author: {{question.author}}</span>
+    </div>
+  {{/link-to}}
+{{else}}
+  <h3>You have no favorites yet.</h3>
+{{/if}} -->
