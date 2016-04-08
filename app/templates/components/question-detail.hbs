@@ -4,7 +4,7 @@
     <h2>Asked by: {{ question.author }}</h2>
     <h3>Additional Notes: {{ question.notes }}</h3>
     {{#if itemFavorited}}
-      <p><i class="fa fa-star"></i>Favorited</p>
+      <p class="favorited"><i class="fa fa-star"></i>Favorited</p>
     {{else}}
       <button {{action 'addToFavorites' question}} class="secondaryBtn">Favorite this Question</button>
     {{/if}}

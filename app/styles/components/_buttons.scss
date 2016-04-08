@@ -73,3 +73,19 @@
     top: 2%;
   }
 }
+
+.favorited {
+  border: 2px solid khaki;
+  background-color: white;
+  width: 150px;
+  padding: 3px 0px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px black;
+  font-size: 12px;
+  margin: 8px 0px;
+  .fa {
+    padding: 0px 15px 0px 15px;
+    color: khaki;
+    border: black;
+  }
+}
