@@ -12,9 +12,9 @@
 </div>
 <div class="container">
   {{ new-answer saveAnswer="saveAnswer" question=question}}
-  {{#each question.answers as |answer|}}
+  {{#each sortedAnswers as |answer|}}
   <div class="answerItem">
-    {{answer-tile answer=answer}}
+    {{answer-tile answer=answer question=question}}
   </div>
   {{/each}}
 </div>

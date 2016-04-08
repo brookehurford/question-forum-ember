@@ -3,6 +3,8 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   favorites: Ember.inject.service(),
   itemFavorited: false,
+  sortBy: ['date:asc'],
+  sortedAnswers: Ember.computed.sort('question.answers', 'sortBy'),
   actions: {
     addToFavorites(question){
       this.get('favorites').add(question);

@@ -7,11 +7,12 @@ export default Ember.Component.extend({
       this.toggleProperty('newAnswerForm');
     },
     saveAnswer(){
+      var momentDate = moment().format('MM/DD/YYYY')
       var formInputs = {
         content: this.get('content') ? this.get('content'):"",
         author: this.get('author') ? this.get('author'):"",
         question: this.get('question'),
-        date: moment().format("LLL")
+        date: momentDate
       };
       console.log(formInputs);
       this.toggleProperty('newAnswerForm');
