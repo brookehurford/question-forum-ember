@@ -8,25 +8,16 @@
     {{else}}
       <button {{action 'addToFavorites' question}} class="yellowBtn">Favorite this Question</button>
     {{/if}}
-    {{update-question question=question updateQuestion="updateQuestion" }}
+    <!-- {{update-question question=question updateQuestion="updateQuestion" }}
     <hr>
-    <button class="secondaryBtn"{{action 'delete' question}}>Delete this question</button>
+    <button class="secondaryBtn"{{action 'delete' question}}>Delete this question</button> -->
   </div>
 </div>
 <div class="container">
-  Total Answers: {{totalAnswers}}
   {{ new-answer saveAnswer="saveAnswer" question=question}}
   {{#each question.answers as |answer|}}
   <div class="answerItem">
     {{answer-tile answer=answer}}
-    <button {{action 'addToVotes' answer}}>Vote for this answer</button>
-    Votes: {{this.totalVotes.votes.length}}
   </div>
   {{/each}}
 </div>
-
-<!-- {{#if itemFavorited}}
-  <p><i class="fa fa-star"></i>Favorited</p>
-{{else}}
-  <button {{action 'addToFavorites' question}} class="secondaryBtn">Favorite this Question</button>
-{{/if}} -->

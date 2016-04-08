@@ -1,0 +1,12 @@
+<h1>Admin Console</h1>
+<div class="container">
+  <div class="questionList">
+    {{#each model as |question|}}
+      {{question-tile question=question}}
+      <div class="adminBtns">
+        {{update-question question=question updateQuestion="updateQuestion" }}
+        <button class="secondaryBtn"{{action 'delete' question}}>Delete this question</button>
+      </div>
+    {{/each}}
+  </div>
+</div>

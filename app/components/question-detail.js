@@ -2,14 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   favorites: Ember.inject.service(),
-  totalAnswers: Ember.computed('question.answers', function (){
-    return this.get('question.answers').get('length');
-  }),
   itemFavorited: false,
   actions: {
-    addToVotes(vote) {
-      this.get('totalVotes').add(vote);
-    },
     addToFavorites(question){
       this.get('favorites').add(question);
       this.set('itemFavorited', true);
