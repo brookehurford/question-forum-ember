@@ -3,6 +3,7 @@
     <h1>{{ question.content }}</h1>
     <h2>Asked by: {{ question.author }}</h2>
     <h3>Additional Notes: {{ question.notes }}</h3>
+    <button {{action 'addToFavorites' question}} class="secondaryBtn">Favorite this Question</button>
     {{update-question question=question updateQuestion="updateQuestion" }}
     <hr>
     <button class="secondaryBtn"{{action 'delete' question}}>Delete this question</button>

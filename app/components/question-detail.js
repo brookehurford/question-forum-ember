@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  favorites: Ember.inject.service(),
+
   actions: {
+    addToFavorites(question){
+      this.get('favorites').add(question);
+      console.log(question);
+    },
     delete(question) {
       if (confirm('Are you sure you want to delete this question?')) {
         this.sendAction('destroyQuestion', question);

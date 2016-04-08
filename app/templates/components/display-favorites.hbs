@@ -1,0 +1,5 @@
+{{#each favorites.questions as |question|}}
+  {{question.content}}, {{question.author}}
+{{/each}}
+
+{{log favorites.questions "favorites"}}
