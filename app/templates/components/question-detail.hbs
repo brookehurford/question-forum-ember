@@ -3,7 +3,11 @@
     <h1>{{ question.content }}</h1>
     <h2>Asked by: {{ question.author }}</h2>
     <h3>Additional Notes: {{ question.notes }}</h3>
-    <button {{action 'addToFavorites' question}} class="secondaryBtn">Favorite this Question</button>
+    {{#if itemFavorited}}
+      <p><i class="fa fa-star"></i>Favorited</p>
+    {{else}}
+      <button {{action 'addToFavorites' question}} class="secondaryBtn">Favorite this Question</button>
+    {{/if}}
     {{update-question question=question updateQuestion="updateQuestion" }}
     <hr>
     <button class="secondaryBtn"{{action 'delete' question}}>Delete this question</button>
@@ -14,6 +18,14 @@
   {{#each question.answers as |answer|}}
   <div class="answerItem">
     {{answer-tile answer=answer}}
+    <button {{action 'addToVotes' answer}}>Vote for this answer</button>
+    Votes: {{this.totalVotes.votes.length}}
   </div>
   {{/each}}
 </div>
+
+<!-- {{#if itemFavorited}}
+  <p><i class="fa fa-star"></i>Favorited</p>
+{{else}}
+  <button {{action 'addToFavorites' question}} class="secondaryBtn">Favorite this Question</button>
+{{/if}} -->

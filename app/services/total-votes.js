@@ -5,6 +5,5 @@ export default Ember.Service.extend({
 
   add(vote) {
     this.get('votes').pushObject(vote);
-    console.log(vote);
   }
 });
